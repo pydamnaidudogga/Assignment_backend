@@ -8,7 +8,7 @@ const User = require('../models/user');
 passport.use(new GoogleStrategy({
     clientID: '641884596744-gfogn1bba0akf6fnl4o3mrmq78at92um.apps.googleusercontent.com',
     clientSecret: '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',
-    callbackURL: 'http://localhost:8000/auth/google/callback',
+    callbackURL: 'https://assignment-backend-qu8p.onrender.com/auth/google/callback',
   }, async (accessToken, refreshToken, profile, done) => {
     try {
 
@@ -23,6 +23,7 @@ passport.use(new GoogleStrategy({
         });
        await user.save();
        return  done(null, user);
+
       } else {
         return done(null, user);
       }

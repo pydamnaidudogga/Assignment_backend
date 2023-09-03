@@ -1,4 +1,4 @@
-
+const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 
 
@@ -14,9 +14,13 @@ module.exports.createSession = async function(req, res){
                 message: "Invalid user"
             });
         }
-
+        const token = jwt.sign({
+            userId: user._id,
+            name : user.name
+          },'same',{expiresIn : "24h"});
+          
           // Redirect the user to the fornt end
-          res.redirect("http://localhost:3000");
+          res.redirect(`https://doteyelabsassignment.netlify.app?token=${token}`);
 
     }catch(err){
         console.error('Error in creating the user', err);

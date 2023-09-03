@@ -23,7 +23,7 @@ app.use(session({
         maxAge: (1000 * 60 * 100)
   },
   store: MongoStore.create({
-        mongoUrl:'mongodb+srv://pydamnaidu:cam29YlaSK3cRHqa@assignment.cjh6ckr.mongodb.net/?retryWrites=true&w=majority',
+        mongoUrl:'mongodb+srv://mushidipallivillage:zMYgy533UZeBVpKr@cluster0.t8jychy.mongodb.net/?retryWrites=true&w=majority',
         autoRemove:'disabled'
   },
   function(err){
@@ -36,7 +36,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://doteyelabsassignment.netlify.app",
   methods:'GET,POST,PUT,DELETE',
   credentials:true,
 }));

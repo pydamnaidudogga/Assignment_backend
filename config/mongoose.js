@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 mongoose.set('strictQuery',false);
 
-mongoose.connect("mongodb+srv://pydamnaidu:cam29YlaSK3cRHqa@assignment.cjh6ckr.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://mushidipallivillage:zMYgy533UZeBVpKr@cluster0.t8jychy.mongodb.net/?retryWrites=true&w=majority", {
   useNewUrlParser: true,
  
 });
